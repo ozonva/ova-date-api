@@ -1,7 +1,11 @@
-package main
+package ova_template_api
 
 import "fmt"
 
-func main() {
-	fmt.Println("Hey! This is \"ova-template-api\" service")
+func Hello() {
+	fmt.Println(getGreeting())
+}
+
+func getGreeting() string {
+	return "Hey! This is \"ova-template-api\" service"
 }
