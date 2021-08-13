@@ -17,18 +17,13 @@ func SplitSlice(input []int, size int) [][]int {
 	return r
 }
 
-func ExcludeItems(input []string, filter []string) []string {
+func ExcludeItems(input []string, filter map[string]bool) []string {
 	var r []string
 
-out:
 	for _, val := range input {
-		for _, example := range filter {
-			if val == example {
-				continue out
-			}
+		if _, ok := filter[val]; !ok {
+			r = append(r, val)
 		}
-
-		r = append(r, val)
 	}
 
 	return r
