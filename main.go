@@ -6,4 +6,5 @@ import (
 
 func main() {
 	ova_template_api.Hello()
+	ova_template_api.Task3()
 }
